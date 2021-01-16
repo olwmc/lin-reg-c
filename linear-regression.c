@@ -65,7 +65,9 @@ int main(void) {
 
   tuple* result = estimateCoefficient(x, y, size);
 
-	printf("h(x_i) = %f + %f*x_i\n", result->left, result->right);
-	printf("PREDICTED FOR X=100: %f\n", predict(result, 100));
+  printf("h(x_i) = %f + %f*x_i\n", result->left, result->right);
+  printf("PREDICTED FOR X=100: %f\n", predict(result, 100));
+	
+  free(result);
   return 0;
 }
